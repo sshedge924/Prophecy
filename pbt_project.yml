@@ -1,0 +1,97 @@
+name: project_git_santosh
+description: ''
+version: 0.0.1
+author: santosh@cloudaeon.net
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: projectgitsantosh
+  parentArtefactID: santoshcloudaeonnetteam
+  buildSystem: wheel
+  author: null
+  createdAt: '2024-03-05 08:57:30'
+pipelines:
+  pipelines/pl_santosh_git:
+    name: pl_santosh_git
+    description: ''
+    author: santosh@cloudaeon.net
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-03-05 08:57:30'
+    datasets:
+      inputs:
+      - datasets/ds_src_forgit
+      outputs:
+      - datasets/ds_tgt_s01
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/ds_src_forgit:
+    name: ds_src_forgit
+    description: ''
+    author: santosh@cloudaeon.net
+    createdAt: '2024-03-05 15:32:04'
+    mode: batch
+    physicalDatasets:
+      Fabric_santosh2_git:
+        fabricId: 10064
+        datasetType: File
+        description: ''
+        author: santosh@cloudaeon.net
+        createdAt: '2024-03-05 15:32:04'
+  datasets/ds_tgt_s01:
+    name: ds_tgt_s01
+    description: ''
+    author: santosh@cloudaeon.net
+    createdAt: '2024-03-05 15:33:36'
+    mode: batch
+    physicalDatasets:
+      Fabric_santosh2_git:
+        fabricId: 10064
+        datasetType: File
+        description: ''
+        author: santosh@cloudaeon.net
+        createdAt: '2024-03-05 15:33:36'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-03-05 08:57:30'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '12654':
+    projectUID: 12654
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
+    version: 0.2.4
+    isDefault: true
+    author: null
+    createdAt: '2024-03-05 08:56:17'
+  '12655':
+    projectUID: 12655
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2024-03-05 08:56:17'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
