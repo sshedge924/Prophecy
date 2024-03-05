@@ -26,6 +26,21 @@ pipelines:
       - datasets/ds_tgt_s01
     subgraphs: []
     dependencies: {}
+  pipelines/pl_santosh_git_01:
+    name: pl_santosh_git_01
+    description: Pipeline with Git Integration
+    author: santosh@cloudaeon.net
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-03-05 17:31:38'
+    datasets:
+      inputs:
+      - datasets/ds_src_forgit
+      outputs:
+      - datasets/ds_tgt_s01
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/ds_src_forgit:
     name: ds_src_forgit
@@ -58,7 +73,19 @@ jobs: {}
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
-  gems: {}
+  gems:
+    gems/custGem001:
+      name: custGem001
+      category: CustomSubgraph
+      subCategory: null
+      description: null
+      author: santosh@cloudaeon.net
+      mode: batch
+      files:
+      - santoshcloudaeonnetteam_projectgitsantosh/gems/custGem001.py
+      gemType: MetaComponentGem
+      dependencies: null
+      createdAt: '2024-03-05 15:40:32'
   dependencies: null
 functions:
   author: null

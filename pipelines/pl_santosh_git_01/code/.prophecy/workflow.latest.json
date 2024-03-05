@@ -7,7 +7,7 @@
       "editableConfig" : true
     },
     "id" : "1",
-    "uri" : "pipelines/pl_santosh_git",
+    "uri" : "pipelines/pl_santosh_git_01",
     "language" : "python",
     "fabricId" : "10064",
     "frontEndLanguage" : "sql",
@@ -59,25 +59,25 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "pl_santosh_git",
+    "topLevelPackage" : "pl_santosh_git_01",
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "8q6UNl7DTH-3Br3v_3G7i$$rEVEhpTamggF3HT1aM1o0",
-    "source" : "zgehKFKiNUWWW4vclBLY6$$NQuFXZLIIzRwrLBhftdrV",
-    "sourcePort" : "J-AitEu3U3B_uJkZRg3BX$$ylUR1FHKCJCHg89tgIBij",
-    "target" : "HrS3p8s8xFI6d5veUvNlR$$f7z0QpZ7qrfh6jnxOPtG9",
-    "targetPort" : "p4i0FcTib0VCZakbeiNM1$$oLT0xDNg6vZxxyXIPs7_o"
+    "id" : "ba1eQ361zws2NcXEuNF_C$$sKuBRCHMuYgpfMrLeiAF8",
+    "source" : "PDW7VyEqqmAVq7ZLq5jpo$$xgPDF-B7t2OXdjyQYRkUp",
+    "sourcePort" : "tYDIT58QNOvpi2lVVYcg6$$o2wPKdokTw9n2gH8X3KYk",
+    "target" : "YUIPiSQHc8xobBeMZBI_v$$dm61ompiSeMIAu4J7SCzg",
+    "targetPort" : "LzJHB2K7nKYv1_9Ry6gSl$$e3Z9ObAwOT0EOMVlun9Cs"
   } ],
   "processes" : {
-    "zgehKFKiNUWWW4vclBLY6$$NQuFXZLIIzRwrLBhftdrV" : {
-      "id" : "zgehKFKiNUWWW4vclBLY6$$NQuFXZLIIzRwrLBhftdrV",
+    "PDW7VyEqqmAVq7ZLq5jpo$$xgPDF-B7t2OXdjyQYRkUp" : {
+      "id" : "PDW7VyEqqmAVq7ZLq5jpo$$xgPDF-B7t2OXdjyQYRkUp",
       "component" : "Source",
       "metadata" : {
         "label" : "ds_src_forgit",
         "slug" : "ds_src_forgit",
-        "x" : -320,
-        "y" : -80,
+        "x" : -340,
+        "y" : -100,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -86,7 +86,7 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "J-AitEu3U3B_uJkZRg3BX$$ylUR1FHKCJCHg89tgIBij",
+          "id" : "tYDIT58QNOvpi2lVVYcg6$$o2wPKdokTw9n2gH8X3KYk",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -97,14 +97,14 @@
         "datasetId" : "datasets/ds_src_forgit"
       }
     },
-    "HrS3p8s8xFI6d5veUvNlR$$f7z0QpZ7qrfh6jnxOPtG9" : {
-      "id" : "HrS3p8s8xFI6d5veUvNlR$$f7z0QpZ7qrfh6jnxOPtG9",
+    "YUIPiSQHc8xobBeMZBI_v$$dm61ompiSeMIAu4J7SCzg" : {
+      "id" : "YUIPiSQHc8xobBeMZBI_v$$dm61ompiSeMIAu4J7SCzg",
       "component" : "Target",
       "metadata" : {
         "label" : "ds_tgt_s01",
         "slug" : "ds_tgt_s01",
-        "x" : -140,
-        "y" : -80,
+        "x" : -160,
+        "y" : -100,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -112,7 +112,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "p4i0FcTib0VCZakbeiNM1$$oLT0xDNg6vZxxyXIPs7_o",
+          "id" : "LzJHB2K7nKYv1_9Ry6gSl$$e3Z9ObAwOT0EOMVlun9Cs",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
