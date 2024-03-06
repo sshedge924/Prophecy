@@ -76,8 +76,8 @@
       "metadata" : {
         "label" : "ds_src_forgit",
         "slug" : "ds_src_forgit",
-        "x" : -320,
-        "y" : -80,
+        "x" : -460,
+        "y" : -200,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -103,8 +103,8 @@
       "metadata" : {
         "label" : "ds_tgt_s01",
         "slug" : "ds_tgt_s01",
-        "x" : -140,
-        "y" : -80,
+        "x" : -280,
+        "y" : -200,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
