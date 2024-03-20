@@ -10,55 +10,26 @@ buildSystemDetails:
   buildSystem: wheel
   author: null
   createdAt: '2024-03-05 08:57:30'
-pipelines:
-  pipelines/pl_santosh_git:
-    name: pl_santosh_git
-    description: ''
-    author: santosh@cloudaeon.net
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2024-03-05 08:57:30'
-    datasets:
-      inputs:
-      - datasets/ds_src_forgit
-      outputs:
-      - datasets/ds_tgt_s01
-    subgraphs: []
-    dependencies: {}
-datasets:
-  datasets/ds_src_forgit:
-    name: ds_src_forgit
-    description: ''
-    author: santosh@cloudaeon.net
-    createdAt: '2024-03-05 15:32:04'
-    mode: batch
-    physicalDatasets:
-      Fabric_santosh2_git:
-        fabricId: 10064
-        datasetType: File
-        description: ''
-        author: santosh@cloudaeon.net
-        createdAt: '2024-03-05 15:32:04'
-  datasets/ds_tgt_s01:
-    name: ds_tgt_s01
-    description: ''
-    author: santosh@cloudaeon.net
-    createdAt: '2024-03-05 15:33:36'
-    mode: batch
-    physicalDatasets:
-      Fabric_santosh2_git:
-        fabricId: 10064
-        datasetType: File
-        description: ''
-        author: santosh@cloudaeon.net
-        createdAt: '2024-03-05 15:33:36'
+pipelines: {}
+datasets: {}
 templates: {}
 jobs: {}
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
-  gems: {}
+  gems:
+    gems/Gem02:
+      name: Gem02
+      category: Custom
+      subCategory: ''
+      description: null
+      author: santosh@cloudaeon.net
+      mode: batch
+      files:
+      - santoshcloudaeonnetteam_projectgitsantosh/gems/Gem02.py
+      gemType: ComponentGem
+      dependencies: null
+      createdAt: '2024-03-20 17:08:32'
   dependencies: null
 functions:
   author: null
