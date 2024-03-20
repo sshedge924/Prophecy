@@ -1,6 +1,6 @@
 name: project_git_santosh
 description: ''
-version: 0.0.1
+version: v0.6
 author: santosh@cloudaeon.net
 language: python
 buildSystem: ''
@@ -18,6 +18,18 @@ gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
   gems:
+    gems/CustomLimit:
+      name: CustomLimit
+      category: Transform
+      subCategory: ''
+      description: null
+      author: santosh@cloudaeon.net
+      mode: batch
+      files:
+      - santoshcloudaeonnetteam_projectgitsantosh/gems/CustomLimit.py
+      gemType: ComponentGem
+      dependencies: []
+      createdAt: '2024-03-07 15:35:07'
     gems/Gem02:
       name: Gem02
       category: Custom
