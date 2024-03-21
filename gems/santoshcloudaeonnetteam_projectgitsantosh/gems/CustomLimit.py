@@ -4,7 +4,7 @@ from pyspark.sql.functions import *
 
 from prophecy.cb.server.base.datatypes import SInt
 from prophecy.cb.ui.uispec import *
-from prophecy.cb.server.base import WorkflowContext
+from prophecy.cb.server.base import WorkflowContext 
 
 class CustomLimit(ComponentSpec):
     name: str = "CustomLimit"

@@ -10,8 +10,35 @@ buildSystemDetails:
   buildSystem: wheel
   author: null
   createdAt: '2024-03-05 08:57:30'
-pipelines: {}
-datasets: {}
+pipelines:
+  pipelines/pl_useGem02:
+    name: pl_useGem02
+    description: Using Gem02
+    author: santosh@cloudaeon.net
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-03-20 17:28:07'
+    datasets:
+      inputs:
+      - datasets/ds_src_input
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/ds_src_input:
+    name: ds_src_input
+    description: ''
+    author: santosh@cloudaeon.net
+    createdAt: '2024-03-20 17:37:48'
+    mode: batch
+    physicalDatasets:
+      fabric_santosh:
+        fabricId: 9997
+        datasetType: File
+        description: ''
+        author: santosh@cloudaeon.net
+        createdAt: '2024-03-20 17:37:48'
 templates: {}
 jobs: {}
 gemContainer:
@@ -30,18 +57,30 @@ gemContainer:
       gemType: ComponentGem
       dependencies: []
       createdAt: '2024-03-07 15:35:07'
-    gems/Gem02:
-      name: Gem02
+    gems/CustomIntCols:
+      name: CustomIntCols
       category: Custom
       subCategory: ''
       description: null
       author: santosh@cloudaeon.net
       mode: batch
       files:
-      - santoshcloudaeonnetteam_projectgitsantosh/gems/Gem02.py
+      - santoshcloudaeonnetteam_projectgitsantosh/gems/CustomIntCols.py
       gemType: ComponentGem
-      dependencies: null
-      createdAt: '2024-03-20 17:08:32'
+      dependencies: []
+      createdAt: '2024-03-20 17:54:27'
+    gems/CustomSynthData:
+      name: CustomSynthData
+      category: Custom
+      subCategory: ''
+      description: null
+      author: santosh@cloudaeon.net
+      mode: batch
+      files:
+      - santoshcloudaeonnetteam_projectgitsantosh/gems/CustomSynthData.py
+      gemType: ComponentGem
+      dependencies: []
+      createdAt: '2024-03-21 04:12:47'
   dependencies: null
 functions:
   author: null
@@ -57,7 +96,7 @@ sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
-dependencies: '[]'
+dependencies: []
 projectDependencies:
   '12654':
     projectUID: 12654
