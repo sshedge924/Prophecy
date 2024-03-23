@@ -39,7 +39,7 @@ class CustomSynthData(ComponentSpec):
         def __init__(self, newProps):
             self.props: CustomSynthData.CustomSynthDataProperties = newProps
 
-        def apply(self, spark: SparkSession, in0: DataFrame) -> DataFrame:
+        def apply(self, spark: SparkSession) -> DataFrame:
             # This method contains logic used to generate the spark code from the given inputs.
 
 
@@ -56,6 +56,6 @@ class CustomSynthData(ComponentSpec):
             df_synthetic = spark.createDataFrame(data, columns)
 
             # Return Synthetic DataFrame
-            in0 = df_synthetic
+            out0 = df_synthetic
 
-            return in0
+            return out0

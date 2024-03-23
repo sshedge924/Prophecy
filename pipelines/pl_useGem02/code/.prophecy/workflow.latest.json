@@ -70,8 +70,8 @@
       "metadata" : {
         "label" : "ds_src_input",
         "slug" : "ds_src_input",
-        "x" : -480,
-        "y" : -120,
+        "x" : -900,
+        "y" : -180,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
