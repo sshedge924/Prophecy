@@ -5,6 +5,7 @@ setup(
     version = '0.7',
     packages = packages_to_include,
     description = '',
-    install_requires = [],
+    install_requires = [
+'faker==24.3.0', ],
     data_files = ["resources/extensions.idx"]
 )

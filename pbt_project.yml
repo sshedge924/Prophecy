@@ -79,7 +79,18 @@ gemContainer:
       files:
       - santoshcloudaeonnetteam_projectgitsantosh/gems/CustomSynthData.py
       gemType: ComponentGem
-      dependencies: []
+      dependencies:
+      - type: pypi
+        modifiedAt: '2024-03-23T11:59:51.601Z'
+        package: faker==24.3.0
+        name: Faker
+        description: ''
+        enabled: true
+        id: EZwiQSfWCckpQCUVc6jgj
+        createdAt: '2024-03-23T11:59:51.601Z'
+        entity: Gem
+        addToPipeline: true
+        editable: true
       createdAt: '2024-03-21 04:12:47'
   dependencies: null
 functions:
@@ -96,7 +107,18 @@ sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
-dependencies: []
+dependencies:
+- description: ''
+  id: XQSIj9OwUrLdvRiJ-uAMV
+  editable: true
+  enabled: true
+  type: pypi
+  name: Faker
+  scope: Project
+  package: faker==24.3.0
+  entity: Project
+  modifiedAt: '2024-03-23T11:53:55.718Z'
+  createdAt: '2024-03-23T11:53:55.718Z'
 projectDependencies:
   '12654':
     projectUID: 12654
