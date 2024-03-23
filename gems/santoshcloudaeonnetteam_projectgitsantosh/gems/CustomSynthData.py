@@ -6,7 +6,7 @@ from prophecy.cb.server.base import WorkflowContext
 from prophecy.cb.server.base.datatypes import SInt, SString
 from prophecy.cb.ui.uispec import *
 
-from Faker import *
+from faker import Faker
 
 class CustomSynthData(ComponentSpec):
     name: str = "CustomSynthData"

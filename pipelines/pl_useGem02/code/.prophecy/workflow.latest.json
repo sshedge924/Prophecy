@@ -62,13 +62,7 @@
     "topLevelPackage" : "pl_usegem02",
     "configurationVersion" : "v1"
   },
-  "connections" : [ {
-    "id" : "YJQO_9XqmTBbKEvjQ1rL6$$-idHBPwSIZb63Ik95QJA_",
-    "source" : "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC",
-    "sourcePort" : "jVcPSe4fOupN7uyyqrVT3$$P4e6lFAhvsPiVFAfzSxFS",
-    "target" : "CSrQxmzGi6HCBLuaLnyMT$$8oV8gDemLKjtqnbla2o59",
-    "targetPort" : "AbzyD2gQmO3nFN184r0Bh$$yH8xHsSoGijk89c1s4uiz"
-  } ],
+  "connections" : [ ],
   "processes" : {
     "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC" : {
       "id" : "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC",
@@ -96,90 +90,6 @@
       "properties" : {
         "datasetId" : "datasets/ds_src_input"
       }
-    },
-    "CSrQxmzGi6HCBLuaLnyMT$$8oV8gDemLKjtqnbla2o59" : {
-      "id" : "CSrQxmzGi6HCBLuaLnyMT$$8oV8gDemLKjtqnbla2o59",
-      "component" : "Gem02",
-      "metadata" : {
-        "label" : "Gem02_1",
-        "slug" : "Gem02_1",
-        "x" : -320,
-        "y" : -120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "AbzyD2gQmO3nFN184r0Bh$$yH8xHsSoGijk89c1s4uiz",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "ProductCategoryKey",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ProductCategoryAlternateKey",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "EnglishProductCategoryName",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "SpanishProductCategoryName",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "FrenchProductCategoryName",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "duEFhU7tBE_7Ce_Y54J3i$$NMqxRRM6_hrAwTPsWRD_u",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "my_property" : "default value of my property"
-      },
-      "componentInfo" : {
-        "gemId" : "gems/Gem02",
-        "projectName" : "project_git_ss_gem"
-      }
     }
   },
   "ports" : {
@@ -188,23 +98,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.CSrQxmzGi6HCBLuaLnyMT$$8oV8gDemLKjtqnbla2o59",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Could not find the spec for Gem02",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  } ]
+  }
 }
