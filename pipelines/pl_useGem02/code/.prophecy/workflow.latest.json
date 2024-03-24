@@ -41,7 +41,20 @@
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
-    "externalDependencies" : [ ],
+    "externalDependencies" : [ {
+      "type" : "pypi",
+      "modifiedAt" : "2024-03-24T08:43:28.811Z",
+      "package" : "pandas==2.2.1",
+      "name" : "pandas",
+      "description" : "pandas",
+      "enabled" : true,
+      "entityName" : "CustomSynthData2",
+      "id" : "2VolxQAikXTvK_XeuMSRC",
+      "createdAt" : "2024-03-24T08:43:28.811Z",
+      "entity" : "Gem",
+      "addToPipeline" : true,
+      "editable" : true
+    } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "12654",
       "projectName" : "ProphecySparkBasicsPython",
@@ -62,7 +75,13 @@
     "topLevelPackage" : "pl_usegem02",
     "configurationVersion" : "v1"
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "xCmP2yKy9QVQv3VKEc5Hu$$-Zqt1cOg3U1IQ-nMkFpvj",
+    "source" : "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC",
+    "sourcePort" : "jVcPSe4fOupN7uyyqrVT3$$P4e6lFAhvsPiVFAfzSxFS",
+    "target" : "3AXNdeLoYExlNNtC5zTXP$$Pu-RkTQZnyWA21AggME01",
+    "targetPort" : "tze3sNYnXjyzdaS7md3Ua$$EgpxUGJ8fXahEsGD7iTtU"
+  } ],
   "processes" : {
     "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC" : {
       "id" : "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC",
@@ -70,8 +89,8 @@
       "metadata" : {
         "label" : "ds_src_input",
         "slug" : "ds_src_input",
-        "x" : -900,
-        "y" : -180,
+        "x" : -4700,
+        "y" : -940,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -90,6 +109,90 @@
       "properties" : {
         "datasetId" : "datasets/ds_src_input"
       }
+    },
+    "3AXNdeLoYExlNNtC5zTXP$$Pu-RkTQZnyWA21AggME01" : {
+      "id" : "3AXNdeLoYExlNNtC5zTXP$$Pu-RkTQZnyWA21AggME01",
+      "component" : "CustomSynthData2",
+      "metadata" : {
+        "label" : "CustomSynthData2_1",
+        "slug" : "CustomSynthData2_1",
+        "x" : -4300,
+        "y" : -940,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "tze3sNYnXjyzdaS7md3Ua$$EgpxUGJ8fXahEsGD7iTtU",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ProductCategoryKey",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ProductCategoryAlternateKey",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "EnglishProductCategoryName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SpanishProductCategoryName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FrenchProductCategoryName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "2r2pILVGiBPZx8ksERr0U$$pue1kDXC0tKOsJAKAL85u",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "100"
+      },
+      "componentInfo" : {
+        "gemId" : "gems/CustomSynthData2",
+        "projectName" : "project_git_ss_gem"
+      }
     }
   },
   "ports" : {
@@ -98,5 +201,23 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.3AXNdeLoYExlNNtC5zTXP$$Pu-RkTQZnyWA21AggME01",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Error occurred while doing Schema Analysis: Unable to infer the type of the field _flags.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
 }
