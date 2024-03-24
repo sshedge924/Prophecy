@@ -16,4 +16,4 @@ def ds_src_input(spark: SparkSession) -> DataFrame:
         .option("header", True)\
         .option("inferSchema", True)\
         .option("sep", ",")\
-        .csv("dbfs:/mnt/ipcontainer/FactProductInventory.csv")
+        .csv("dbfs:/mnt/ipcontainer/DimProductSubCategory.csv")
