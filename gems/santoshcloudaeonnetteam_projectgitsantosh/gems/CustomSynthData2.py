@@ -63,13 +63,13 @@ class CustomSynthData2(ComponentSpec):
 
             
             # Create a Spark session
-            spark = SparkSession.builder.appName("SyntheticDataGenerator").getOrCreate()
+            spark = SparkSession.builder.appName("SyntheticDataGenerator2").getOrCreate()
 
             df = in0.toPandas()
 
-            num_cols = df._get_numeric_data().columns
+            #num_cols = df._get_numeric_data().columns
 
-            df.select_dtypes(include=['float','integer']) # integer  object
+            #df.select_dtypes(include=['float','integer']) # integer  object
 
             n = self.props.limit.value
 
@@ -82,6 +82,6 @@ class CustomSynthData2(ComponentSpec):
             df_synthetic = spark.createDataFrame(synthetic_data)
 
             # Return Synthetic DataFrame
-            in0 = df_synthetic
+            out0 = df_synthetic
 
-            return in0
+            return out0

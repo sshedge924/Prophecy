@@ -76,11 +76,11 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "xCmP2yKy9QVQv3VKEc5Hu$$-Zqt1cOg3U1IQ-nMkFpvj",
+    "id" : "F8i03VZSfl_v3zUGPeZsk$$cRXKlRyIvaFy5IsEernSk",
     "source" : "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC",
     "sourcePort" : "jVcPSe4fOupN7uyyqrVT3$$P4e6lFAhvsPiVFAfzSxFS",
-    "target" : "3AXNdeLoYExlNNtC5zTXP$$Pu-RkTQZnyWA21AggME01",
-    "targetPort" : "tze3sNYnXjyzdaS7md3Ua$$EgpxUGJ8fXahEsGD7iTtU"
+    "target" : "SXCDxre9XRObkcLDqoU4k$$T7l4SaPZfiClznYCMnUJV",
+    "targetPort" : "GVwouqQChDKG1FAjJ0MHW$$PwyAnOQXHBjjVC3Fm99X2"
   } ],
   "processes" : {
     "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC" : {
@@ -89,8 +89,8 @@
       "metadata" : {
         "label" : "ds_src_input",
         "slug" : "ds_src_input",
-        "x" : -4700,
-        "y" : -940,
+        "x" : -6040,
+        "y" : -1280,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -110,14 +110,14 @@
         "datasetId" : "datasets/ds_src_input"
       }
     },
-    "3AXNdeLoYExlNNtC5zTXP$$Pu-RkTQZnyWA21AggME01" : {
-      "id" : "3AXNdeLoYExlNNtC5zTXP$$Pu-RkTQZnyWA21AggME01",
+    "SXCDxre9XRObkcLDqoU4k$$T7l4SaPZfiClznYCMnUJV" : {
+      "id" : "SXCDxre9XRObkcLDqoU4k$$T7l4SaPZfiClznYCMnUJV",
       "component" : "CustomSynthData2",
       "metadata" : {
         "label" : "CustomSynthData2_1",
         "slug" : "CustomSynthData2_1",
-        "x" : -4300,
-        "y" : -940,
+        "x" : -5880,
+        "y" : -1280,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -125,12 +125,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "tze3sNYnXjyzdaS7md3Ua$$EgpxUGJ8fXahEsGD7iTtU",
+          "id" : "GVwouqQChDKG1FAjJ0MHW$$PwyAnOQXHBjjVC3Fm99X2",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "ProductCategoryKey",
+              "name" : "ProductKey",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -139,7 +139,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "ProductCategoryAlternateKey",
+              "name" : "DateKey",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -148,8 +148,8 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "EnglishProductCategoryName",
-              "type" : "string",
+              "name" : "MovementDate",
+              "type" : "date",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -157,8 +157,8 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "SpanishProductCategoryName",
-              "type" : "string",
+              "name" : "UnitCost",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -166,8 +166,26 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "FrenchProductCategoryName",
-              "type" : "string",
+              "name" : "UnitsIn",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "UnitsOut",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "UnitsBalance",
+              "type" : "integer",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -179,7 +197,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "2r2pILVGiBPZx8ksERr0U$$pue1kDXC0tKOsJAKAL85u",
+          "id" : "fqO7troQRf7XfmwlnUfp-$$Bc90nRCfr4t2hn_FZQ8xg",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -187,7 +205,7 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "limit" : "100"
+        "limit" : "10"
       },
       "componentInfo" : {
         "gemId" : "gems/CustomSynthData2",
@@ -203,7 +221,7 @@
     "autoUpdateOnRun" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.3AXNdeLoYExlNNtC5zTXP$$Pu-RkTQZnyWA21AggME01",
+    "property" : "$.workflow.processes.SXCDxre9XRObkcLDqoU4k$$T7l4SaPZfiClznYCMnUJV",
     "range" : {
       "start" : {
         "line" : 0,

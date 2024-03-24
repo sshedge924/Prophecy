@@ -10,10 +10,10 @@ def ds_src_input(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(
           StructType([
-            StructField("ProductCategoryKey", IntegerType(), True), StructField("ProductCategoryAlternateKey", IntegerType(), True), StructField("EnglishProductCategoryName", StringType(), True), StructField("SpanishProductCategoryName", StringType(), True), StructField("FrenchProductCategoryName", StringType(), True)
+            StructField("ProductKey", IntegerType(), True), StructField("DateKey", IntegerType(), True), StructField("MovementDate", DateType(), True), StructField("UnitCost", DoubleType(), True), StructField("UnitsIn", IntegerType(), True), StructField("UnitsOut", IntegerType(), True), StructField("UnitsBalance", IntegerType(), True)
         ])
         )\
         .option("header", True)\
         .option("inferSchema", True)\
         .option("sep", ",")\
-        .csv("dbfs:/mnt/ipcontainer/DimProductCategory.csv")
+        .csv("dbfs:/mnt/ipcontainer/FactProductInventory.csv")
