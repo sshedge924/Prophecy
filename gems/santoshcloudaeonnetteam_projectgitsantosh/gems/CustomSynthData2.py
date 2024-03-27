@@ -55,7 +55,7 @@ class CustomSynthData2(ComponentSpec):
         def __init__(self, newProps):
             self.props: CustomSynthData2.CustomSynthData2Properties = newProps
 
-        def apply(self, spark: SparkSession, in0: DataFrame) -> DataFrame:
+        def apply(self, spark: SparkSession, in0:DataFrame ) -> DataFrame:
             # This method contains logic used to generate the spark code from the given inputs.
            
             import pandas as pd
@@ -78,10 +78,26 @@ class CustomSynthData2(ComponentSpec):
             spark = SparkSession.builder.appName("SyntheticDataGenerator2").getOrCreate()
 
             #bank_churn_data = in0.toPandas()
+            #bank_churn_data = in0.select("*").toPandas()
+            
+            # bank_churn_data = pd.read_csv("/mnt/ipcontainer/bank_churn_input.csv")
 
-            bank_churn_data = pd.read_csv("/mnt/ipcontainer/bank_churn_input.csv")
+            sample_df = sc.parallelize([
+                        (15773898,'Lucchese',	586,	'France',	'Female',23,	2,	0,	2,	0,	1,	160976.75),
+                        (15782418,'Nott',	683,	'France',	'Female',46,	2,	0,	1,	1,	0,	72549.27),
+                        (15807120,'Knorr',	656,	'France',	'Female',34,	7,	0,	2,	1,	0,	138882.09),
+                        (15808905,'ODonnell',	681,	'France',	'Male',	36,	8,	0,	1,	1,	0,	113931.57),
+                        (15607314,'Higgins',	752,	'Germany',	'Male',	38,	10,	121263.62,1,	1,	0,	139431),
+                        (15672704,'Pearson',	593,	'France',	'Female',22,	9,	0,	2,	0,	0,	51907.72),
+                        (15647838,'Onyemere',	682,	'Spain',	'Male',	45,	4,	0,	2,	1,	1,	157878.67),
+                        (15775307,'Hargreaves',	539,	'Spain',	'Female',47,	8,	0,	2,	1,	1,	126784.29),
+                        (15653937,'Hsueh',	845,	'France',	'Female',47,	3,	111096.91,1,	1,	0,	94978.1)
+                                                ]
+                        ).toDF(["CustomerID","Surname","CreditScore","Geography","Gender","Age","Tenure","Balance","NumOfProducts","HasCrCard","IsActiveMember","EstimatedSalary"])
 
-            geog = bank_churn_data['Geography'].unique()
+            bank_churn_data = sample_df.toPandas()
+
+            geog = bank_churn_data["Geography"].unique()
             gend = bank_churn_data['Gender'].unique()
             prod = bank_churn_data['NumOfProducts'].unique()
             cc   = bank_churn_data['HasCrCard'].unique()
