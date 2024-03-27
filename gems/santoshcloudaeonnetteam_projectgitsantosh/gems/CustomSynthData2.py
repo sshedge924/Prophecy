@@ -6,6 +6,8 @@ from prophecy.cb.server.base import WorkflowContext
 from prophecy.cb.server.base.datatypes import SInt, SString
 from prophecy.cb.ui.uispec import *
 
+
+
 class CustomSynthData2(ComponentSpec):
     name: str = "CustomSynthData2"
     category: str = "Custom"
@@ -16,7 +18,7 @@ class CustomSynthData2(ComponentSpec):
 
     @dataclass(frozen=True)
     class CustomSynthData2Properties(ComponentProperties):
-        limit: SInt = SInt("100")
+        limit: SInt = SInt("10")
 
     def dialog(self) -> Dialog:
         # Define the UI dialog structure for the component
@@ -53,7 +55,7 @@ class CustomSynthData2(ComponentSpec):
 
     class CustomSynthData2Code(ComponentCode):
         def __init__(self, newProps):
-            self.props: CustomSynthData2.CustomSynthData2Properties = newProps
+            self.props: CustomSynthData22.CustomSynthData22Properties = newProps
 
         def apply(self, spark: SparkSession, in0:DataFrame ) -> DataFrame:
             # This method contains logic used to generate the spark code from the given inputs.
@@ -61,6 +63,7 @@ class CustomSynthData2(ComponentSpec):
             import pandas as pd
             import numpy as np
             import datetime
+            #import org.apache.spark.sql.types.{IntegerType,StringType,StructType,StructField}
 
             from faker import Faker
             import random2
@@ -103,8 +106,7 @@ class CustomSynthData2(ComponentSpec):
             cc   = bank_churn_data['HasCrCard'].unique()
             acti = bank_churn_data['IsActiveMember'].unique()
 
-            print(geog)
-            
+                        
             #CREATE FILE HEADER FROM THE LIST OF INPUT COLUMNS
             file_hdr = bank_churn_data.columns.tolist()
 
@@ -113,20 +115,6 @@ class CustomSynthData2(ComponentSpec):
 
             # SET FAKER INPUT LOCALE
             fake = Faker('en_GB')
-
-
-            # FAKER INPUT LOCALE
-            fake = Faker('en_GB')
-
-
-            # A_list = np.random.randint(1, 100, N)
-            # B_list = np.random.randint(1, 100, N)
-            # df = pd.DataFrame({'A': A_list, 'B': B_list})
-            # df.head()
-
-
-            # geo = np.array(geog) # CREATING AN ARRAY OF CATEGORICAL STRINGS - CITIES
-            # gen = np.array(gend) # CREATING AN ARRAY OF CATEGORICAL STRINGS - GENDER
 
             def x(a, b, N):
                 return np.random.randint(a, b, N)
@@ -169,7 +157,7 @@ class CustomSynthData2(ComponentSpec):
             df['IsActiveMember']  = np.vectorize(y)(2,N)
             df['EstimatedSalary'] = np.vectorize(x)(10,200000,N)
 
-            df_synthetic = df[["CustomerID","Surname","CreditScore","Geography","Gender","Age","Tenure","Balance","NumOfProducts","HasCrCard","IsActiveMember","EstimatedSalary"]]     
+            df_synthetic = df[["id","CustomerID","Surname","CreditScore","Geography","Gender","Age","Tenure","Balance","NumOfProducts","HasCrCard","IsActiveMember","EstimatedSalary"]]     
             
             
             # end = timer()
@@ -178,6 +166,26 @@ class CustomSynthData2(ComponentSpec):
             # Return Synthetic DataFrame
             #out0 = df_synthetic
             # Pandas to Spark
-            out0 = spark_session.createDataFrame(df_synthetic)
+            data = [1,15773898,'Lucchese',	586,	'France',	'Female',23,	2,	0,	2,	0,	1,	160976.75]
+            columns = ["id","CustomerID","Surname","CreditScore","Geography","Gender","Age","Tenure","Balance","NumOfProducts","HasCrCard","IsActiveMember","EstimatedSalary"]
 
-            return out0
+            columns = StructType(Array(
+                            StructField("id",IntegerType,true),
+                            StructField("CustomerID",IntegerType,true),
+                            StructField("Surname",StringType,true),
+                            StructField("CreditScore", IntegerType, true),
+                            StructField("Geography", StringType, true),
+                            StructField("Gender", StringType, true),
+                            StructField("Age",IntegerType,true),
+                            StructField("Tenure",IntegerType,true),
+                            StructField("Balance",IntegerType,true),
+                            StructField("NumOfProducts", IntegerType, true),
+                            StructField("HasCrCard", IntegerType, true),
+                            StructField("IsActiveMember", IntegerType, true),
+                            StructField("EstimatedSalary", IntegerType, true)
+                        ))
+
+
+            in0 = spark.createDataFrame(data=data, schema=columns)
+
+            return in0

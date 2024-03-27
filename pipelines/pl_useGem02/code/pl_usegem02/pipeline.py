@@ -4,9 +4,10 @@ from pyspark.sql.types import *
 from pl_usegem02.config.ConfigStore import *
 from pl_usegem02.udfs.UDFs import *
 from prophecy.utils import *
+from pl_usegem02.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_ds_src_input = ds_src_input(spark)
 
 def main():
     spark = SparkSession.builder\

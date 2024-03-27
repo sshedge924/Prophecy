@@ -62,13 +62,221 @@
     "topLevelPackage" : "pl_usegem02",
     "configurationVersion" : "v1"
   },
-  "connections" : [ ],
-  "processes" : { },
+  "connections" : [ {
+    "id" : "abqrLF25B7O8_hVESnKcT$$AH1Fx8rf1FiyUYr5NA3Rg",
+    "source" : "-w6EGb2baH2Z5HWjJvTS5$$psdlkQ4rmaOlmhIv4hUgJ",
+    "sourcePort" : "e2HbwMIU1vogvIfitTSka$$KkWrhLneMqZCnsldcotEI",
+    "target" : "2l-c0TLwF0j2lOoGe9gsu$$bvzWsWLyaZZOmB3mLqia7",
+    "targetPort" : "T-aMvoOYPy4PhaTrNFni6$$RODU6hP7nBZ1NJ8Q-Ej9-"
+  } ],
+  "processes" : {
+    "-w6EGb2baH2Z5HWjJvTS5$$psdlkQ4rmaOlmhIv4hUgJ" : {
+      "id" : "-w6EGb2baH2Z5HWjJvTS5$$psdlkQ4rmaOlmhIv4hUgJ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ds_src_input",
+        "slug" : "ds_src_input",
+        "x" : -520,
+        "y" : -20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "e2HbwMIU1vogvIfitTSka$$KkWrhLneMqZCnsldcotEI",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds_src_input"
+      }
+    },
+    "2l-c0TLwF0j2lOoGe9gsu$$bvzWsWLyaZZOmB3mLqia7" : {
+      "id" : "2l-c0TLwF0j2lOoGe9gsu$$bvzWsWLyaZZOmB3mLqia7",
+      "component" : "CustomSynthData2",
+      "metadata" : {
+        "label" : "CustomSynthData2_1",
+        "slug" : "CustomSynthData2_1",
+        "x" : -380,
+        "y" : -20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "T-aMvoOYPy4PhaTrNFni6$$RODU6hP7nBZ1NJ8Q-Ej9-",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerId",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Surname",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CreditScore",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Geography",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Tenure",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Balance",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumOfProducts",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "HasCrCard",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IsActiveMember",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "EstimatedSalary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "lOzeW_CxFmQVj5HzVg8RD$$e0KHAUY5N0Z1E2x5-T6j7",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "10"
+      },
+      "componentInfo" : {
+        "gemId" : "gems/CustomSynthData2",
+        "projectName" : "project_git_ss_gem"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.2l-c0TLwF0j2lOoGe9gsu$$bvzWsWLyaZZOmB3mLqia7",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Could not find the spec for CustomSynthData2",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
 }
