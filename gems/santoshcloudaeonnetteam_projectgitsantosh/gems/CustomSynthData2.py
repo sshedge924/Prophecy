@@ -16,7 +16,7 @@ class CustomSynthData2(ComponentSpec):
 
     @dataclass(frozen=True)
     class CustomSynthData2Properties(ComponentProperties):
-        limit: SInt = SInt("10")
+        limit: SInt = SInt("100")
 
     def dialog(self) -> Dialog:
         # Define the UI dialog structure for the component
@@ -58,30 +58,108 @@ class CustomSynthData2(ComponentSpec):
         def apply(self, spark: SparkSession, in0: DataFrame) -> DataFrame:
             # This method contains logic used to generate the spark code from the given inputs.
            
-            from pandas import pandas
+            import pandas as pd
             import numpy as np
+            import datetime
 
+            from faker import Faker
+            import random2
+            from random2 import randint
+            from faker.providers import DynamicProvider
+
+            # IMPORT SECRETS
+            import secrets
+
+            # IMPORT TIMER
+            from timeit import default_timer as timer
+            from datetime import timedelta
             
             # Create a Spark session
             spark = SparkSession.builder.appName("SyntheticDataGenerator2").getOrCreate()
 
-            df = in0.toPandas()
+            #bank_churn_data = in0.toPandas()
 
-            #num_cols = df._get_numeric_data().columns
+            bank_churn_data = pd.read_csv("/mnt/ipcontainer/bank_churn_input.csv")
 
-            #df.select_dtypes(include=['float','integer']) # integer  object
+            geog = bank_churn_data['Geography'].unique()
+            gend = bank_churn_data['Gender'].unique()
+            prod = bank_churn_data['NumOfProducts'].unique()
+            cc   = bank_churn_data['HasCrCard'].unique()
+            acti = bank_churn_data['IsActiveMember'].unique()
 
-            n = self.props.limit.value
+            print(geog)
+            
+            #CREATE FILE HEADER FROM THE LIST OF INPUT COLUMNS
+            file_hdr = bank_churn_data.columns.tolist()
 
-            synthetic_data=[]
+            #CREATE AN EMPTY DATAFRAME WITH THE HEADER
+            df = pd.DataFrame(columns=file_hdr)
 
-            # Generate synthetic data
-            for i in range(n):
-                synthetic_data.append(df.apply(lambda x: x.sample(n=1),axis=0).sum(axis=0))
-           
-            df_synthetic = spark.createDataFrame(synthetic_data)
+            # SET FAKER INPUT LOCALE
+            fake = Faker('en_GB')
+
+
+            # FAKER INPUT LOCALE
+            fake = Faker('en_GB')
+
+
+            # A_list = np.random.randint(1, 100, N)
+            # B_list = np.random.randint(1, 100, N)
+            # df = pd.DataFrame({'A': A_list, 'B': B_list})
+            # df.head()
+
+
+            # geo = np.array(geog) # CREATING AN ARRAY OF CATEGORICAL STRINGS - CITIES
+            # gen = np.array(gend) # CREATING AN ARRAY OF CATEGORICAL STRINGS - GENDER
+
+            def x(a, b, N):
+                return np.random.randint(a, b, N)
+
+            def y(a, N):
+                return np.random.choice(a, N)
+
+            def sur(N):
+                arr = np.array([fake.last_name() for _ in range(N)], dtype=object)
+                return arr
+
+            def geo(N):
+                arr = np.array([secrets.choice(geog) for _ in range(N)], dtype=object)
+                return arr
+
+            def gen(N):
+                arr = np.array([secrets.choice(gend) for _ in range(N)], dtype=object)
+                return arr
+
+            N = component.properties.limit.value  # THIS IS THE DATAFRAME ROWCOUNT THAT NEEDS TO BE CREATED
+
+            # start = timer()
+
+            id = np.arange(start=1, stop=N+1, step=1)
+
+            # CREATE DATAFRAME WITH COLUMN id AND FILL IT WITH AN THE ARRAY id
+            df = pd.DataFrame({'id': id})
+
+            # KEEPING ADDED SYNTHETICALLY FILLED COLUMNS TO THE DATAFRAME
+            df['CustomerID']      = np.vectorize(x)(1000000, 9999999,N)
+            df['Surname']         = np.vectorize(sur)(N)  #df.apply(lambda x: fake.last_name(), axis=1)
+            df['CreditScore']     = np.vectorize(x)(350, 850, N)
+            df['Geography']       = np.vectorize(geo)(N)  #df.apply(lambda x: secrets.choice(geog), axis=1)
+            df['Gender']          = np.vectorize(gen)(N)  #df.apply(lambda x: secrets.choice(gend), axis=1)
+            df['Age']             = np.vectorize(x)(18, 100, N)
+            df['Tenure']          = np.vectorize(x)(1, 11, N)
+            df['Balance']         = np.vectorize(y)(300000, N)
+            df['NumOfProducts']   = np.vectorize(x)(1,4,N)  #df.apply(lambda x: secrets.choice(prod), axis=1)
+            df['HasCrCard']       = np.vectorize(y)(2,N)
+            df['IsActiveMember']  = np.vectorize(y)(2,N)
+            df['EstimatedSalary'] = np.vectorize(x)(10,200000,N)
+
+            df_synthetic = df[["CustomerID","Surname","CreditScore","Geography","Gender","Age","Tenure","Balance","NumOfProducts","HasCrCard","IsActiveMember","EstimatedSalary"]]     
+            
+            
+            # end = timer()
+            # print(f"Time taken to generate {N} recs: ",timedelta(seconds=end-start))            
 
             # Return Synthetic DataFrame
             out0 = df_synthetic
 
-            return out0
+            return in0

@@ -2,49 +2,42 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: ProductKey
+  - name: ProductSubcategoryKey
     type: integer
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: DateKey
+  - name: ProductSubcategoryAlternateKey
     type: integer
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: MovementDate
-    type: date
+  - name: EnglishProductSubcategoryName
+    type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: UnitCost
-    type: double
+  - name: SpanishProductSubcategoryName
+    type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: UnitsIn
-    type: integer
+  - name: FrenchProductSubcategoryName
+    type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: UnitsOut
-    type: integer
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
-  - name: UnitsBalance
+  - name: ProductCategoryKey
     type: integer
     nullable: true
     metadata:

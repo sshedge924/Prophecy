@@ -8,6 +8,7 @@ from pl_usegem02.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_ds_src_input = ds_src_input(spark)
+    df_CustomSynthData_1 = CustomSynthData_1(spark, df_ds_src_input)
 
 def main():
     spark = SparkSession.builder\

@@ -43,14 +43,14 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ {
       "type" : "pypi",
-      "modifiedAt" : "2024-03-24T08:43:28.811Z",
-      "package" : "pandas==2.2.1",
-      "name" : "pandas",
-      "description" : "pandas",
+      "modifiedAt" : "2024-03-23T12:50:53.253Z",
+      "package" : "Faker==24.3.0",
+      "name" : "Faker",
+      "description" : "Faker Libraries",
       "enabled" : true,
-      "entityName" : "CustomSynthData2",
-      "id" : "2VolxQAikXTvK_XeuMSRC",
-      "createdAt" : "2024-03-24T08:43:28.811Z",
+      "entityName" : "CustomSynthData",
+      "id" : "WSJ5dN6dOn7pvBa02ydHA",
+      "createdAt" : "2024-03-23T12:50:53.253Z",
       "entity" : "Gem",
       "addToPipeline" : true,
       "editable" : true
@@ -76,11 +76,11 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "F8i03VZSfl_v3zUGPeZsk$$cRXKlRyIvaFy5IsEernSk",
+    "id" : "DuoncnaHNqPwG3SKAYWdG$$JPQu9jFqg55FERPF_vc9-",
     "source" : "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC",
     "sourcePort" : "jVcPSe4fOupN7uyyqrVT3$$P4e6lFAhvsPiVFAfzSxFS",
-    "target" : "SXCDxre9XRObkcLDqoU4k$$T7l4SaPZfiClznYCMnUJV",
-    "targetPort" : "GVwouqQChDKG1FAjJ0MHW$$PwyAnOQXHBjjVC3Fm99X2"
+    "target" : "W4xtmuTpxQfaOzFCnepuY$$d-ctpzQxFlLgoOAHXZxH2",
+    "targetPort" : "bIkbfi03CN5x6SEClgPoX$$MfLiX-SAv9yhidnFB_jhq"
   } ],
   "processes" : {
     "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC" : {
@@ -89,8 +89,8 @@
       "metadata" : {
         "label" : "ds_src_input",
         "slug" : "ds_src_input",
-        "x" : -6040,
-        "y" : -1280,
+        "x" : -7480,
+        "y" : -1680,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -110,14 +110,14 @@
         "datasetId" : "datasets/ds_src_input"
       }
     },
-    "SXCDxre9XRObkcLDqoU4k$$T7l4SaPZfiClznYCMnUJV" : {
-      "id" : "SXCDxre9XRObkcLDqoU4k$$T7l4SaPZfiClznYCMnUJV",
-      "component" : "CustomSynthData2",
+    "W4xtmuTpxQfaOzFCnepuY$$d-ctpzQxFlLgoOAHXZxH2" : {
+      "id" : "W4xtmuTpxQfaOzFCnepuY$$d-ctpzQxFlLgoOAHXZxH2",
+      "component" : "CustomSynthData",
       "metadata" : {
-        "label" : "CustomSynthData2_1",
-        "slug" : "CustomSynthData2_1",
-        "x" : -5880,
-        "y" : -1280,
+        "label" : "CustomSynthData_1",
+        "slug" : "CustomSynthData_1",
+        "x" : -7300,
+        "y" : -1680,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -125,12 +125,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "GVwouqQChDKG1FAjJ0MHW$$PwyAnOQXHBjjVC3Fm99X2",
+          "id" : "bIkbfi03CN5x6SEClgPoX$$MfLiX-SAv9yhidnFB_jhq",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "ProductKey",
+              "name" : "ProductSubcategoryKey",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -139,7 +139,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "DateKey",
+              "name" : "ProductSubcategoryAlternateKey",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -148,8 +148,8 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "MovementDate",
-              "type" : "date",
+              "name" : "EnglishProductSubcategoryName",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -157,8 +157,8 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "UnitCost",
-              "type" : "double",
+              "name" : "SpanishProductSubcategoryName",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -166,8 +166,8 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "UnitsIn",
-              "type" : "integer",
+              "name" : "FrenchProductSubcategoryName",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -175,16 +175,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "UnitsOut",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "UnitsBalance",
+              "name" : "ProductCategoryKey",
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
@@ -197,7 +188,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "fqO7troQRf7XfmwlnUfp-$$Bc90nRCfr4t2hn_FZQ8xg",
+          "id" : "8FdMyZaApOoxHLRH_hvTZ$$Rf_NJVBtKm1JogewilbUO",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -205,10 +196,10 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "limit" : "10"
+        "limit" : "1000"
       },
       "componentInfo" : {
-        "gemId" : "gems/CustomSynthData2",
+        "gemId" : "gems/CustomSynthData",
         "projectName" : "project_git_ss_gem"
       }
     }
@@ -219,23 +210,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.SXCDxre9XRObkcLDqoU4k$$T7l4SaPZfiClznYCMnUJV",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Error occurred while doing Schema Analysis: Unable to infer the type of the field _flags.",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  } ]
+  }
 }

@@ -6,6 +6,6 @@ setup(
     packages = packages_to_include,
     description = '',
     install_requires = [
-'Faker==24.3.0', 'pandas==2.2.1', ],
+'Faker==24.3.0', 'pandas==2.2.1', 'numpy==1.26.4', 'DateTime==5.5', 'random2==1.0.2', ],
     data_files = ["resources/extensions.idx"]
 )

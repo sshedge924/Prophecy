@@ -10,7 +10,7 @@ def ds_src_input(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(
           StructType([
-            StructField("ProductKey", IntegerType(), True), StructField("DateKey", IntegerType(), True), StructField("MovementDate", DateType(), True), StructField("UnitCost", DoubleType(), True), StructField("UnitsIn", IntegerType(), True), StructField("UnitsOut", IntegerType(), True), StructField("UnitsBalance", IntegerType(), True)
+            StructField("ProductSubcategoryKey", IntegerType(), True), StructField("ProductSubcategoryAlternateKey", IntegerType(), True), StructField("EnglishProductSubcategoryName", StringType(), True), StructField("SpanishProductSubcategoryName", StringType(), True), StructField("FrenchProductSubcategoryName", StringType(), True), StructField("ProductCategoryKey", IntegerType(), True)
         ])
         )\
         .option("header", True)\
