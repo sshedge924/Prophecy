@@ -41,20 +41,7 @@
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
-    "externalDependencies" : [ {
-      "type" : "pypi",
-      "modifiedAt" : "2024-03-23T12:50:53.253Z",
-      "package" : "Faker==24.3.0",
-      "name" : "Faker",
-      "description" : "Faker Libraries",
-      "enabled" : true,
-      "entityName" : "CustomSynthData",
-      "id" : "WSJ5dN6dOn7pvBa02ydHA",
-      "createdAt" : "2024-03-23T12:50:53.253Z",
-      "entity" : "Gem",
-      "addToPipeline" : true,
-      "editable" : true
-    } ],
+    "externalDependencies" : [ ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "12654",
       "projectName" : "ProphecySparkBasicsPython",
@@ -75,135 +62,8 @@
     "topLevelPackage" : "pl_usegem02",
     "configurationVersion" : "v1"
   },
-  "connections" : [ {
-    "id" : "DuoncnaHNqPwG3SKAYWdG$$JPQu9jFqg55FERPF_vc9-",
-    "source" : "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC",
-    "sourcePort" : "jVcPSe4fOupN7uyyqrVT3$$P4e6lFAhvsPiVFAfzSxFS",
-    "target" : "W4xtmuTpxQfaOzFCnepuY$$d-ctpzQxFlLgoOAHXZxH2",
-    "targetPort" : "bIkbfi03CN5x6SEClgPoX$$MfLiX-SAv9yhidnFB_jhq"
-  } ],
-  "processes" : {
-    "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC" : {
-      "id" : "N1tKnjawWJO5PoMxjlKi2$$-mPnDbKKYS-9zqNnOiwOC",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "ds_src_input",
-        "slug" : "ds_src_input",
-        "x" : -7480,
-        "y" : -1680,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "jVcPSe4fOupN7uyyqrVT3$$P4e6lFAhvsPiVFAfzSxFS",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/ds_src_input"
-      }
-    },
-    "W4xtmuTpxQfaOzFCnepuY$$d-ctpzQxFlLgoOAHXZxH2" : {
-      "id" : "W4xtmuTpxQfaOzFCnepuY$$d-ctpzQxFlLgoOAHXZxH2",
-      "component" : "CustomSynthData",
-      "metadata" : {
-        "label" : "CustomSynthData_1",
-        "slug" : "CustomSynthData_1",
-        "x" : -7300,
-        "y" : -1680,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "bIkbfi03CN5x6SEClgPoX$$MfLiX-SAv9yhidnFB_jhq",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "ProductSubcategoryKey",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ProductSubcategoryAlternateKey",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "EnglishProductSubcategoryName",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "SpanishProductSubcategoryName",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "FrenchProductSubcategoryName",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ProductCategoryKey",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "8FdMyZaApOoxHLRH_hvTZ$$Rf_NJVBtKm1JogewilbUO",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "limit" : "1000"
-      },
-      "componentInfo" : {
-        "gemId" : "gems/CustomSynthData",
-        "projectName" : "project_git_ss_gem"
-      }
-    }
-  },
+  "connections" : [ ],
+  "processes" : { },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],

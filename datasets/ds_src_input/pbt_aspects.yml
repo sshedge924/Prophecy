@@ -2,43 +2,92 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: ProductSubcategoryKey
+  - name: id
     type: integer
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: ProductSubcategoryAlternateKey
+  - name: CustomerId
     type: integer
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: EnglishProductSubcategoryName
+  - name: Surname
     type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: SpanishProductSubcategoryName
-    type: string
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
-  - name: FrenchProductSubcategoryName
-    type: string
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
-  - name: ProductCategoryKey
+  - name: CreditScore
     type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Geography
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Gender
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Age
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Tenure
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Balance
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: NumOfProducts
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: HasCrCard
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: IsActiveMember
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EstimatedSalary
+    type: double
     nullable: true
     metadata:
       description: ''

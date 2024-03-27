@@ -20,8 +20,7 @@ pipelines:
     language: python
     createdAt: '2024-03-20 17:28:07'
     datasets:
-      inputs:
-      - datasets/ds_src_input
+      inputs: []
       outputs: []
     subgraphs: []
     dependencies: {}

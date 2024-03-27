@@ -176,6 +176,8 @@ class CustomSynthData2(ComponentSpec):
             # print(f"Time taken to generate {N} recs: ",timedelta(seconds=end-start))            
 
             # Return Synthetic DataFrame
-            out0 = df_synthetic
+            #out0 = df_synthetic
+            # Pandas to Spark
+            out0 = spark_session.createDataFrame(df_synthetic)
 
-            return in0
+            return out0
